@@ -1,0 +1,24 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box
+}
+body{
+  background-color:#0f172a;
+  color:#fff;
+    font-family: sans-serif;
+}
+
+/* Prevent horizontal page scroll on small screens; inner scroll regions
+   (tables) opt in via overflowX:auto instead. */
+html, body {
+  overflow-x: hidden;
+}
+
+/* Tighten default heading sizes a touch on mobile so the dashboard
+   doesn't feel oversized on narrow viewports. */
+@media (max-width: 767px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+}
