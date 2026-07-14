@@ -2,7 +2,10 @@
 
 A modern, responsive analytics & admin dashboard built with **React 19 + TypeScript + Vite**, with charts powered by **Recharts** and a mock REST backend powered by **json-server**.
 
-![Home dashboard](docs/home.png)
+![React](https://img.shields.io/badge/React_19-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![Recharts](https://img.shields.io/badge/Recharts-22B5BF?style=for-the-badge&logoColor=white)
 
 ## Features
 
@@ -77,3 +80,15 @@ src/
 ## API endpoints (json-server)
 
 `clients`, `products`, `recentOrders`, `stats`, `revenue`, `weeklyOrders`, `salesByCategory`, `ordersVsCustomers` — all served from `db.json` at `http://localhost:3001`.
+
+## 👤 Author
+
+**Gehad Ahmed** — Front-End Developer
+
+- 🔗 GitHub: [@gehad-ahmed](https://github.com/gehad-ahmed)
+- 💼 LinkedIn: [Gehad Ahmed](https://www.linkedin.com/in/gehad-ahmed-9a8351259/)
+- 📧 Email: gehadAhmedEzz.96@gmail.com
+
+---
+
+<p align="center">Made with 💜 by Gehad Ahmed — ⭐ Star this repo if you found it useful!</p>
