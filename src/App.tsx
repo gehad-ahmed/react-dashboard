@@ -4,6 +4,8 @@ import Sidebar from "./components/Sidebar.tsx";
 import MainContent from "./components/MainContent.tsx";
 import useMediaQuery from "./components/useMediaQuery.ts";
 import { ToastProvider } from "./components/ui/index.ts";
+import Auth from "./components/Auth.tsx";
+import { getCurrentUser, logout, type AuthUser } from "./lib/auth.ts";
 
 const ACTIVE_PAGE_KEY = "nexus.activePage";
 
@@ -15,6 +17,7 @@ function readInitialPage(): string {
 function App() {
   const [activePage, setActivePage] = useState<string>(readInitialPage);
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const [user, setUser] = useState<AuthUser | null>(getCurrentUser);
   const isMobile = useMediaQuery("(max-width: 767px)");
 
   // The drawer only exists on mobile; deriving this keeps it from appearing
@@ -31,8 +34,16 @@ function App() {
     setDrawerOpen(false);
   };
 
+  const handleLogout = () => {
+    logout();
+    setUser(null);
+  };
+
   return (
     <ToastProvider>
+      {!user ? (
+        <Auth onAuthenticated={setUser} />
+      ) : (
       <div style={{ display: "flex", minHeight: "100vh" }}>
         {isMobile ? (
           <>
@@ -100,7 +111,7 @@ function App() {
                 boxShadow: isDrawerOpen ? "2px 0 16px rgba(0,0,0,0.5)" : "none",
               }}
             >
-              <Sidebar activePage={activePage} setActivePage={handleSelectPage} />
+              <Sidebar activePage={activePage} setActivePage={handleSelectPage} userName={user.name} onLogout={handleLogout} />
             </div>
 
             {/* Content sits below the fixed app bar */}
@@ -110,11 +121,12 @@ function App() {
           </>
         ) : (
           <>
-            <Sidebar activePage={activePage} setActivePage={handleSelectPage} />
+            <Sidebar activePage={activePage} setActivePage={handleSelectPage} userName={user.name} onLogout={handleLogout} />
             <MainContent activePage={activePage} isMobile={isMobile} />
           </>
         )}
       </div>
+      )}
     </ToastProvider>
   );
 }
