@@ -1,0 +1,276 @@
+{
+  "clients": [
+    {
+      "name": "Khaled Group",
+      "industry": "technology",
+      "status": "Active",
+      "id": "5"
+    },
+    {
+      "name": "gehad",
+      "industry": "tech",
+      "status": "Inactive",
+      "id": "6044"
+    },
+    {
+      "id": "095e",
+      "name": "Nour Solutions",
+      "industry": "Finance",
+      "status": "Inactive"
+    },
+    {
+      "id": "3893",
+      "name": "ahmed",
+      "industry": "tech",
+      "status": "Active"
+    },
+    {
+      "id": "9f14",
+      "name": "sara",
+      "industry": "finance",
+      "status": "Active"
+    }
+  ],
+  "stats": [
+    {
+      "id": "st1",
+      "key": "orders",
+      "label": "Orders",
+      "value": 1234,
+      "color": "#6EE7F7"
+    },
+    {
+      "id": "st2",
+      "key": "customers",
+      "label": "Customers",
+      "value": 2567,
+      "color": "#A78BFA"
+    },
+    {
+      "id": "st3",
+      "key": "revenue",
+      "label": "Revenue",
+      "value": 3456,
+      "color": "#34D399"
+    }
+  ],
+  "revenue": [
+    {
+      "id": "rv1",
+      "month": "Jan",
+      "revenue": 4000
+    },
+    {
+      "id": "rv2",
+      "month": "Feb",
+      "revenue": 5500
+    },
+    {
+      "id": "rv3",
+      "month": "Mar",
+      "revenue": 4800
+    },
+    {
+      "id": "rv4",
+      "month": "Apr",
+      "revenue": 6300
+    },
+    {
+      "id": "rv5",
+      "month": "May",
+      "revenue": 7100
+    },
+    {
+      "id": "rv6",
+      "month": "Jun",
+      "revenue": 6800
+    }
+  ],
+  "weeklyOrders": [
+    {
+      "id": "wo1",
+      "day": "Sat",
+      "orders": 45
+    },
+    {
+      "id": "wo2",
+      "day": "Sun",
+      "orders": 62
+    },
+    {
+      "id": "wo3",
+      "day": "Mon",
+      "orders": 78
+    },
+    {
+      "id": "wo4",
+      "day": "Tue",
+      "orders": 55
+    },
+    {
+      "id": "wo5",
+      "day": "Wed",
+      "orders": 90
+    },
+    {
+      "id": "wo6",
+      "day": "Thu",
+      "orders": 72
+    },
+    {
+      "id": "wo7",
+      "day": "Fri",
+      "orders": 38
+    }
+  ],
+  "salesByCategory": [
+    {
+      "id": "sc1",
+      "name": "Electronics",
+      "value": 35
+    },
+    {
+      "id": "sc2",
+      "name": "Clothing",
+      "value": 25
+    },
+    {
+      "id": "sc3",
+      "name": "Food",
+      "value": 20
+    },
+    {
+      "id": "sc4",
+      "name": "Books",
+      "value": 12
+    },
+    {
+      "id": "sc5",
+      "name": "Other",
+      "value": 8
+    }
+  ],
+  "ordersVsCustomers": [
+    {
+      "id": "oc1",
+      "month": "Jan",
+      "orders": 180,
+      "customers": 320
+    },
+    {
+      "id": "oc2",
+      "month": "Feb",
+      "orders": 210,
+      "customers": 380
+    },
+    {
+      "id": "oc3",
+      "month": "Mar",
+      "orders": 195,
+      "customers": 350
+    },
+    {
+      "id": "oc4",
+      "month": "Apr",
+      "orders": 270,
+      "customers": 420
+    },
+    {
+      "id": "oc5",
+      "month": "May",
+      "orders": 310,
+      "customers": 480
+    },
+    {
+      "id": "oc6",
+      "month": "Jun",
+      "orders": 290,
+      "customers": 460
+    }
+  ],
+  "recentOrders": [
+    {
+      "id": "ro2",
+      "customer": "Sara Mohamed",
+      "product": "Phone",
+      "amount": 800,
+      "date": "2025-03-03",
+      "status": "Pending"
+    },
+    {
+      "id": "ro3",
+      "customer": "Omar Hassan",
+      "product": "Tablet",
+      "amount": 450,
+      "date": "2025-03-05",
+      "status": "Delivered"
+    },
+    {
+      "id": "ro4",
+      "customer": "Nour Khaled",
+      "product": "Headphones",
+      "amount": 120,
+      "date": "2025-03-07",
+      "status": "Cancelled"
+    },
+    {
+      "id": "ro5",
+      "customer": "Mona Saeed",
+      "product": "Monitor",
+      "amount": 650,
+      "date": "2025-03-09",
+      "status": "Pending"
+    }
+  ],
+  "products": [
+    {
+      "id": "p3",
+      "name": "Cotton T-Shirt",
+      "category": "Clothing",
+      "price": 25,
+      "stock": 110,
+      "status": "In Stock"
+    },
+    {
+      "id": "p4",
+      "name": "Leather Jacket",
+      "category": "Clothing",
+      "price": 189,
+      "stock": 21,
+      "status": "In Stock"
+    },
+    {
+      "id": "p5",
+      "name": "Organic Coffee Beans",
+      "category": "Food",
+      "price": 18,
+      "stock": 60,
+      "status": "In Stock"
+    },
+    {
+      "id": "p6",
+      "name": "Dark Chocolate Box",
+      "category": "Food",
+      "price": 12,
+      "stock": 5,
+      "status": "Low Stock"
+    },
+    {
+      "id": "p7",
+      "name": "The Pragmatic Programmer",
+      "category": "Books",
+      "price": 42,
+      "stock": 33,
+      "status": "In Stock"
+    },
+    {
+      "id": "p8",
+      "name": "Ceramic Coffee Mug",
+      "category": "Other",
+      "price": 15,
+      "stock": 0,
+      "status": "Out of Stock"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

@@ -1,7 +1,7 @@
 import { useState, type FormEvent } from "react";
 import { colors, spacing } from "../theme.ts";
 import { Card, Field, Input, Button, useToast } from "./ui/index.ts";
-import { login, signup, type AuthUser } from "../lib/auth.ts";
+import { login, signup, loginAsGuest, type AuthUser } from "../lib/auth.ts";
 
 type Mode = "login" | "signup";
 
@@ -41,6 +41,12 @@ function Auth({ onAuthenticated }: { onAuthenticated: (user: AuthUser) => void }
   const switchMode = () => {
     setMode(isSignup ? "login" : "signup");
     setPassword("");
+  };
+
+  const handleGuest = () => {
+    const user = loginAsGuest();
+    toast(`Welcome, ${user.name}! Exploring the demo.`, "info");
+    onAuthenticated(user);
   };
 
   return (
@@ -108,6 +114,15 @@ function Auth({ onAuthenticated }: { onAuthenticated: (user: AuthUser) => void }
               {submitting ? "Please wait…" : isSignup ? "Sign up" : "Log in"}
             </Button>
           </form>
+
+          <Button
+            variant="ghost"
+            type="button"
+            onClick={handleGuest}
+            style={{ width: "100%", marginTop: spacing.md }}
+          >
+            Explore as guest
+          </Button>
 
           <div
             style={{

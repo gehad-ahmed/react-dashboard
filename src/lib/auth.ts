@@ -70,3 +70,11 @@ export function login(email: string, password: string): AuthUser {
 export function logout(): void {
   window.localStorage.removeItem(SESSION_KEY);
 }
+
+// One-click entry for the public demo — lets a visitor explore the dashboard
+// without creating an account.
+export function loginAsGuest(): AuthUser {
+  const session: AuthUser = { name: "Guest", email: "guest@demo.dev" };
+  window.localStorage.setItem(SESSION_KEY, JSON.stringify(session));
+  return session;
+}
